@@ -1,18 +1,20 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "stripe",
-  "title": "Stripe",
+  "name": "stripe-dashboard",
+  "title": "Stripe Dashboard",
   "description": "Quick Stripe Dashboard Access",
   "icon": "stripe.png",
   "author": "farisaziz12",
   "categories": [
-    "Developer Tools"
+    "Developer Tools",
+    "Productivity",
+    "Finance"
   ],
   "license": "MIT",
   "commands": [
     {
       "name": "index",
-      "title": "Dashboard",
+      "title": "View Dashboard",
       "description": "Template for showing a static grid",
       "mode": "view"
     }

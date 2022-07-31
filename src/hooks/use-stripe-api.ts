@@ -61,17 +61,19 @@ export const useStripeApi = (endpoint: string) => {
 
   const { isLoading, data, error } = fetch;
 
-  useEffect((() => {
-      const options = resolveToastOptions({ ...fetch, endpoint });
-      showToast(options);
+  useEffect(() => {
+    const options = resolveToastOptions({ ...fetch, endpoint });
+    showToast(options);
 
-      return () => {
+    return () => {
+      if (isLoading) {
         showToast({
           style: Toast.Style.Failure,
           title: `Fetch cancelled`,
         });
       }
-  }), [isLoading, data, error]);
+    };
+  }, [isLoading, data, error]);
 
   return fetch;
 };
